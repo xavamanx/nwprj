@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Suez+One&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    outline:none;
+    color:green;
+    text-decoration: none;
+}
+
+body,html{
+    width: 100%;
+    height:100%;
+}
+
+body{
+    background-color:rgb(7, 150, 14);
+    font-family: 'Trebuchet MS', Helvetica;
+}
+/* шапка сайта */
+header{
+    width: 100%;
+    padding:10px 0.5% 0px 0.5%;
+    background:transparent;
+    float:left;
+    position:fixed;
+}
+
+header #logo{
+    color:green;
+    cursor:pointer;
+}
+header #logo span{
+    font-size:1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Suez One',serif;
+
+}
+
+
+@media(min-width:701px){
+    #logo
+    {
+     float:left;
+     width:30%;
+     font-size: 1.1em;
+    }
+}
+
+    #about {
+        float:right;
+        width:67%;
+
+    }
+
+
+@media(min-width:700px){
+    #logo
+    {
+     margin-top:15px;
+     width:100%;
+     font-size: 1.5em;
+    }
+}
+
+#about {
+    float:left;
+    width:100%;
+}
+
+#about{
+    text-align: center;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+#about >{color:#fff}
+
+#about > a:hover {
+    color: goldenrod ;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child){
+    margin-right: 7%;
+}
+
+/* стили для фиксирования шапки */
+.fixed{
+  z-index:5000;
+  background-color: black;
+  border-bottom:1px solid siver;  
+}
+.header.fixed #logo{
+    color:#343343
+}
+.fixed #about a{color: #343343
+}
+.fixed #about a:hover {
+    color: #7c7c7c
+}
+
+/* главный блок на сайте */
+#top{
+  width: 100%;
+  
+  background: url(./src/images/Halo-Infinite.jpg.jfif);
+  background-blend-mode: multiply;
+  background-color: #2e3a44;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 3em;
+}
+@media(min-width: 1001px) {
+    #top{
+        height: 100%;
+        font-size: 3em;
+    }
+}
+
+@media(max-width: 1000px)and (min-width:651px){
+    #top{
+        font-size: 2em;
+    }
+}
+@media(max-width: 650px) {
+    #top{
+        font-size: 1.3em;
+        padding-top: 50%;
+    }
+}
+
+
+#top h1{
+    padding-top: 20%;
+}
+#top h3{
+   color:green; 
+}
+/* блок с возможностями */
+#main{
+    padding:100px 20%;
+    width: 60%;
+    float:left;
+    background-color:rgb(58 192 42);
+    border-top: 2px solid silver;
+    color:#484848;
+    font-size: 1.3em;
+}
+
+@media(min-width: 1401px){
+    #main{
+        padding:100px 20%;
+        width: 60%;
+    }
+}
+
+@media(max-width: 1400px){
+    #main{
+        padding:100px 10%;
+        width: 80%;
+    }
+}
+
+
+@media(max-width: 700px){
+    #main div{
+        padding:100px 10%;
+        width: 98%;
+        margin-bottom: -30%;
+    }
+}
+#main div{
+    width: 48%;
+    margin-right: 2%;
+    float:left;
+}
+#main h2 {
+    font-size: 3em;
+}
+#main span {
+     color:black
+}
+/* блок с преимуществами */
+#overview{
+    float:left;
+     background-image: url(./src/images/Halo-Infinite.jpg.jfif);
+     background-blend-mode: multiply;
+     background-color:slateblue;
+     background-size: cover;
+     background-attachment: fixed;
+     padding:100px 0;
+     width: 100%;
+     text-align: center;
+     color:#fff;
+     
+
+}
+
+#overview h2 {
+    font-size: 4.5em;
+}
+#overview h4 {
+     color:green;font-size: 3.5em;
+}
+
+
+#overview .overview-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+}
+
+#overview .overview-wrap .pict{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#overview .overview-wrap .pict img{
+    width: 30%;
+}
+
+#overview .overview-wrap .pict img{
+    background:#fafafa;
+    padding: 5px;
+    border:2px solid silver;
+    width: 100%;
+    max-width:500px;
+}
+
+#overview .overview-wrap .pict span {
+    font-size: 2em;
+    margin-top:10px;
+}
+
+@media(max-width:700px){
+#overview .overview-wrap {
+    width:80%;
+    margin-right: 0;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: unset;
+}
+}
+
+/* блок контакты */
+#contacts{
+    width:100%;
+    float:left;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    border-top: 4px solid siver;
+    background: rgb(58 192 42);
+}
+
+
+h1,h2,h3,h4,h5{
+    font-family:'Roboto Slab', serif;
+    font-weight:lighter ;
+}
+
+#contacts h5{
+    font-size: 3em;
+    color: green;
+}
+
+#form_input{
+    width:35%;
+    margin-top: 15px;
+    margin-left: 38%;
+    font-size:1.1em;
+}
+
+#form_input label{
+    color: green;
+    cursor:pointer;
+    font-size: 1.4em;
+    font-family: "Roboto Slab",serif;
+
+}
+
+#form_input label >span {
+    color:goldenrod;
+}
+#form_input, #form_input textarea{
+    margin-bottom: 10px;
+    width: 70%;
+    padding:10% 2%;
+    border-radius: 7px;
+    border:2px solid silver;
+    font-size: 0.9em;
+    margin:auto;
+    background-image: url(./src/images/HaloInfinite.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: slateblue;
+
+} 
+#form_input input:focus,#form_input textarea:focus{
+    border-color: goldenrod;
+}
+.btn{
+    float:right;
+    border-radius: 5px;
+    padding:5px 9px;
+    font-size: 1.2em;
+    background-color:green;
+    text-shadow: #454545 0 0 2px;
+    cursor: pointer;
+    color:goldenrod;
+    font-family: 'Roboto Slab',serif;
+    
+}
+btn:hover{
+    background-color: #c15443;
+}
+#faq{
+    background-color: #1d2b6c;
+    border-top:2px dashed black;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    
+   
+    
+    
+}
+
+#faq .div{
+    width: 25%;
+    margin-left: 6%;
+    float: left;
+}
+#faq .heading{
+    color:#7d7d7d;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#faq p{
+    font-family:Arimo,Helvetica,sens-serf;
+    font-size: -0.95px;
+    color:4a4a4a;
+    margin-bottom: 40px;
+}

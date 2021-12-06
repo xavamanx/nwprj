@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBOX NEWS BLOG</title>
+    <link  href="main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id ="logo" onclick="slowScroll('#top')">
+            <span>XboxNewsBlog</span>
+        </div>
+        <div id ="about">
+            <a href ="#" title ="Возможности" onclick ="slowScroll('#main')">Возможности</a>
+            <a href ="#"  onclick ="slowScroll('#overiew')">Преимущества</a>
+            <a href ="#"  onclick ="slowScroll('#contacts')">Контакты</a>
+            <a href ="#"  onclick ="slowScroll('#faq')">Ответы на вопросы</a>
+        </div>
+    </header>
+
+    <div id ="top">
+        <h1>XboxNewsBlog</h1>
+        <h3>Лучшее место для фаната Xbox</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Наш выбор Xbox</h2>
+            <span>Большой выбор всего,что может вам пригодиться</span>
+        </div>
+    <div class="text">
+            <span>
+                Архитектура Xbox Velocity
+                Оцените скорость и производительность нового поколения, которая стала доступна благодаря архитектуре Xbox Velocity, реализованной на базе специального твердотельного накопителя и интегрированного программного обеспечения.<br>
+                
+                Значок обложки игры Xbox
+                Расширение игровой библиотеки
+                Играйте в тысячи игр для четырех поколений Xbox благодаря возможностям обратной совместимости, включая оптимизированные игры в день выхода консолей нового поколения.<br>
+                
+                Логотип Xbox Game Pass
+                Xbox Game Pass
+                Получите неограниченный доступ к более чем 100 высококачественным играм с абонементом Xbox Game Pass, в том числе к совершенно новым играм от Xbox Game Studios, таким как Halo Infinite, в день их выхода.<br>
+                
+                Логотип Smart Delivery
+                Smart Delivery
+                Играйте в лучшую доступную версию своей игры, независимо от того, на каком устройстве вы ее запускаете, с помощью технологии Smart Delivery.<br></span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Преимущества</h2>
+        <h4>"Это эксклюзивы которые вы желаете!"</h4>
+
+    <div class="overview-wrap">
+        <div class="pict">
+            <img src="./src/images/HaloInfinite.jpg" alt="">
+            <span>Halo Infinite</span>
+        </div>
+        <div class="pict">
+            <img src="./src/images/ForzaHorizon5.jpg" alt="">
+            <span>ForzaHorizon 5</span>
+        </div>
+        <div class="pict">
+            <img src="./src/images/Gears5.jpg" alt="">
+            <span>Gears 5</span>
+        </div>
+        <div class="pict">
+            <img src="./src/images/SeaOfThieves.jpg" alt="">
+            <span>Sea of Thieves</span>
+        </div>
+    </div>
+</div>
+    
+<div id="contacts">
+   <center><h5>Обратная связь</h5><center>
+    <form id="form_input">
+        <label for="name">Имя<span>*</span></label><br>
+        <input type="text" placeholder="Введите Имя" name="name" id="name"><br>
+        <label for="email">Ваша почта<span>*</span></label><br>
+        <input type="email" placeholder="Введите email" name="email" id="email"><br>
+        <label for="message">сообщение<span>*</span></label><br>
+    <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+    <div id="mess_send" class="btn">Отправить</div>
+</form>
+</div>
+
+<div id="faq">
+<div>
+    <span class="title">Новости</span><br>
+    <span class="heading">
+        как часто выкладываются новости?
+    </span>
+    <p>Каждый день выкладываются новости</p><br>
+    <span class="heading">
+        какие новости выкладываются на этот сайт?
+    </span>
+    <p>Самые свежие новости о xbox выкладываются сюда</p><br>
+</div>
+<div></div>
+<div></div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id){
+            $('body').animate({
+                scrollTop:$(id).offset().top
+            },500);
+        }
+
+        $(document).on("scroll",function (){
+            if($(window).scrollTop()=== 0)
+            $("header").removeClass("fixed");
+            else
+            $('header').attr("class","fixed"); 
+        });
+        
+    </script>
+
+</body>
+</html>
